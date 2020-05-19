@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta harset="UTF-8">
+		<title>My Website</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<section>
+			<h1>Welcome to my website</h1>
+			<nav>
+				<p>
+				<a href="index.html">Home</a>
+				<a href="whiteboard.html">Whiteboard</a> 
+				<a href="webcam.html">Webcam</a>
+				</p> 
+			</nav>
+		
+		<section>
+
+				<h1>Webcam</h1>
+				<p>textext
+					<br>
+				<div id="container">
+					<video autoplay="true" id="videoElement"></video>
+				</div>
+
+				<script>
+
+				  var video = document.querySelector("#videoElement");
+
+				if (navigator.mediaDevices.getUserMedia) {
+				  navigator.mediaDevices.getUserMedia({ video: true })
+				    .then(function (stream) {
+				      video.srcObject = stream;
+				    })
+				    .catch(function (err0r) {
+				      console.log("Something went wrong!");
+				    });
+				}
+				</script>
+
+				</p>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+
+
+body {
+    background-color: lightblue;
+    width: 1000px;
+	padding: 100px;
+	box-sizing: border-box;
+}
+
+h1 {
+    color: black;
+    font: 36px Fahkwang, serif;
+    font-weight: bold;
+}
+
+p {
+	color: blue;
+	font: 24px FreeMono, monospace;
+}
+
+
+.blink {
+    animation: 2s infinite blink;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 15% {
+        opacity: 0;
+    }
+    16%, 100% {
+        opacity: 1;
+    }
+}
+
+@font-face {
+  font-family: Fahkwang;
+  src: url(Fahkwang_Regular_400.ttf);
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: Fahkwang;
+  src: url(Fahkwang_Bold_700.ttf);
+  font-weight: bold;
+}
