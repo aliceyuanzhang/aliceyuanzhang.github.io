@@ -9,21 +9,30 @@
 
 	<body>
 		<section>
-			<h1>Welcome to my website</h1>
+			<h2><span id="datetime"></span></h2>
+
+			<script>
+			var dt = new Date();
+			document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+			</script>
+
+			<br>
+			<br>
+
+			<h1>The Pool</h1>
+			<p>Soak in the waves of your virtual watery subconscious. </p>
+			<br>
 			<nav>
 				<p>
-				<a href="index.html">Home</a><br>
-				<a href="whiteboard.html">Whiteboard</a><br>
+				<a href="index.html">Home</a>
+				<a href="residence.html">Residence</a> 
+				<a href="whiteboard.html">Whiteboard</a> 
 				<a href="webcam.html">Webcam</a>
-				</p> 
+				</p>
 			</nav>
-		
-		<section>
-				
-				<!-- iframe -->
-				<h1>Look around</h1>
-				<p>Hello and welcome! Make it our collective home. </p>
+			<br>
 		</section>
+
 	</body>
 </html>
 
