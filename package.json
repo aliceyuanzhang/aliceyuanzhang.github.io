@@ -1,0 +1,25 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "test site",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliceyuanzhang/aliceyuanzhang.github.io.git"
+  },
+  "author": "Alice Yuan Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aliceyuanzhang/aliceyuanzhang.github.io/issues"
+  },
+  "homepage": "https://github.com/aliceyuanzhang/aliceyuanzhang.github.io#readme",
+  "keywords": []
+}

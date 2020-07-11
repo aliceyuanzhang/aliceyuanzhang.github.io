@@ -1,0 +1,174 @@
+<DOCTYPE html>
+<html lang="en">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+
+<title>Alice Yuan Zhang</title>
+
+<div id="expand-box">
+	<div id="expand-box-header">
+		<span style="float: left"><a href="index.html"><img src="ayz white.png" style="width: 100px; margin-left: 10px"></a></span>
+		<span style="float: right"><a href="mailto:intrinsicolor@gmail.com"><img src="mail.png" style="width: 80px; margin-right: 10px"></a></span>
+	</div>
+</div>
+
+<div class="page-wrap">
+
+<!-- 	<video autoplay muted loop id="background">
+	  <source src="mentalscape_naohai.mp4" type="video/mp4">
+	</video> -->
+
+	<body>
+
+		
+
+		<div id="links">
+			<section><a href="https://miro.com/app/board/o9J_kr2R0Mc=/" target="_blank"><div class="item" style="background-image: url('turtle.png'); background-size: contain; background-position: no-repeat; width: 131px; height: 82px"></div></a>
+
+				<a href="https://vimeo.com/427156830" target="_blank"><div class="item" style="background-image: url('boys.png'); background-size: contain; background-position: no-repeat; width: 170px; height: 150px; margin-left: 20px"></div></a>
+			</section>
+
+			<section style="margin: 10px">
+
+			<a href="https://www.instagram.com/aliceyuanzhang/" target="_blank"><div class="item" style="background-image: url('mentalscape.png'); background-size: contain; background-position: no-repeat; width: 180px; height: 120px; margin-left: -50px"></div></a>
+
+			<a href="https://antiracistpopquiz.com/" target="_blank"><div class="item" style="background-image: url('ARPQ.jpg'); background-size: contain; background-position: no-repeat; float: right; margin-top: 20px"></div></a>
+
+			<a href="https://virtualcarelab.com/" target="_blank"><div class="item" style="background-image: url('vcl.png'); background-size: contain; background-position: no-repeat; width: 110px; height: 80px; margin-top: 150px"></div></a>
+
+			</section>
+
+			<section>
+			<a href="https://www.instagram.com/a/r/?effect_id=221939319075012" target="_blank"><div  class="item" style="background-image: url('lostfound.png'); background-size: contain; background-position: no-repeat; width: 100px; height: 100px"></div></a>
+
+			<!-- <a href="about.html"> --><div class="item" onclick="openPopup()" style="background-image: url('portrait.png'); background-size: contain; background-position: no-repeat; position: relative; width: 180px; height: 220px"></div><!-- </a> -->
+
+		</section>
+
+		<section>
+			<a href="https://hubs.mozilla.com/qaASZvX/screen-st-our-habitatt-of-the-now" target="_blank">
+				<div class="item" style="background-image: url('stopsign.png'); background-size: contain; background-position: no-repeat; margin-left: -30px; width: 70px; height: 200px"></div></a>
+
+			</section>
+		</div>
+
+	</body>
+	
+
+	<div id="myPopup" onclick="closePopup()">
+		<div id="PopupText">
+		<b>HELLO VISITOR  👋</b>
+		<br><br>
+		I'm Alice Yuan Zhang, an artist, designer, and program organizer based in Los Angeles, with skills in <i>graphic design, web design and coding, 3D modeling, and AR/VR environments</i>.
+		<br><br>I deeply believe in the power of creative projects that are collaborative, playful, and functional. My current projects are thematically anchored in generative networks, inter-species collaborations, IRL + URL space-making, magical realism and futuring, and object-oriented ontology. 
+		<br></br>
+		I co-organize <a href="https://virtualcarelab.com/">virtual care lab</a> and recently facilitated <a href="https://navel.la/events/assembliesq3-quarterly/">Digital Matterealities</a>, an experimental learning group with <a href="https://navel.la/">NAVEL</a>. I hold a B.A. from University of California, Berkeley.
+
+		<br><br><hr><br>
+		Let's chat! Reach me by <a href="mailto:intrinsicolor@gmail.com">email</a> or <a href="https://www.instagram.com/aliceyuanzhang/">Instagram</a>.
+		</div>
+	</div>
+
+
+</div>
+
+
+<script>
+
+// When the user clicks on <div>, open the popup
+
+function openPopup() {
+  document.getElementById("myPopup").style.display = "block";
+  console.log('here');
+}
+
+function closePopup() {
+  document.getElementById("myPopup").style.display = "none";
+  console.log('here');
+}
+</script>
+
+<!-- <script>
+    var dragItem = document.querySelector(".item");
+    var links = document.querySelector("#links");
+
+    var active = false;
+    var currentX;
+    var currentY;
+    var initialX;
+    var initialY;
+    var xOffset = 0;
+    var yOffset = 0;
+
+    links.addEventListener("touchstart", dragStart, false);
+    links.addEventListener("touchend", dragEnd, false);
+    links.addEventListener("touchmove", drag, false);
+
+    links.addEventListener("mousedown", dragStart, false);
+    links.addEventListener("mouseup", dragEnd, false);
+    links.addEventListener("mousemove", drag, false);
+
+    links.addEventListener("click", onClick, false);
+
+    function onClick(e) {
+    	if (active) {
+    		active = false;
+    	} else {
+    		dragItem.toggle();
+    	}
+    }
+
+    function dragStart(e) {
+      if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+      } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+      }
+
+      if (e.target === dragItem) {
+        active = true;
+      }
+    }
+
+    function dragEnd(e) {
+      initialX = currentX;
+      initialY = currentY;
+
+      active = false;
+    }
+
+    function drag(e) {
+      if (active) {
+      
+        e.preventDefault();
+      
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
+        } else {
+          currentX = e.clientX - initialX;
+          currentY = e.clientY - initialY;
+        }
+
+        xOffset = currentX;
+        yOffset = currentY;
+
+        setTranslate(currentX, currentY, dragItem);
+      }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+  </script> -->
+
+
+</html>
+

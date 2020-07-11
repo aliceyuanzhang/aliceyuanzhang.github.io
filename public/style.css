@@ -1,0 +1,262 @@
+
+.page-wrap {
+    padding-top: 5vw;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+}
+
+/*#background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 120%;
+  overflow: hidden;
+  z-index: -100;
+}*/
+
+body {
+    background-image: url("gradients.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+
+    padding: 40px;
+    box-sizing: border-box;
+    font: 18px Archivo, serif;
+    color: white;
+    z-index: 15;
+}
+
+a {
+  font-weight: bold;
+  color: #FF4500;
+  text-decoration: none;
+}
+
+#expand-box {
+    z-index: 50;
+    width: 95%;
+  }
+
+#expand-box-header {
+    margin: 0 auto;
+    padding: 0 0 3px 2px;
+    overflow: hidden;
+  }
+
+#expand_box_sub_header { clear: both; }
+
+#links{
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    background-image: url("clouds.png");
+    background-size: contain;
+    background-repeat: no-repeat;    
+    background-position: center;
+/*    animation: 5s infinite wavy;*/    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    touch-action: none;
+    z-index: 30;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+/*  background-image: url("ARPQ.jpg");
+  background-size: contain;
+  background-position: no-repeat;*/
+  touch-action: none;
+  user-select: none;
+}
+
+.item:active {
+/*  background-color: rgba(168, 218, 220, 1.00);*/
+}
+
+.item:hover {
+  cursor: help;
+  transform: scale(1.5);
+}
+
+
+#myPopup{
+  display: none;
+  z-index: 5000;
+  width: 750px;
+  height: 300px;
+  border: 2px solid #FF4500;
+  background-color: white;
+  margin: 0% auto;
+  padding: 6vh;
+  padding-top: 3vh;
+  box-sizing: border-box;
+  position: absolute;
+  font: 14px Archivo, serif;
+  color: black;
+  box-shadow: 10px 10px 8px #888888;
+  overflow-wrap: normal;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+@keyframes wavy{
+  0%{
+    transform: translateX(0) translateY(0) scaleY(1);
+  }
+  50%{
+    transform: translateX(-25) translateY(0) scaleY(0.5);
+  }
+  100%{
+    transform: translateX(-50) translateY(0) scaleY(1);
+  }
+}
+
+#smell {
+    z-index: 30;
+    width: 100vh;
+    position: relative;
+    left: 30px;
+    top: 100px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+.page-wrap {
+    padding-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+#links{
+  transform:scale(0.7);
+  width: auto;
+  }
+
+#expand-box {
+    z-index: 1000;
+  }
+
+#myPopup {
+    width: 100%;
+    height: 85%;
+    margin-top: 30px;
+    padding-top: 8vh;
+  }
+}
+
+
+/*h1 {
+    color: yellow;
+    font: 36px Fahkwang, serif;
+    font-weight: bold;
+}
+
+h2 {
+    color: lightblue;
+    font: 20px Fahkwang, serif;
+    font-weight: regular;
+}
+
+p {
+	color: white;
+	font: 28px FreeMono, monospace;
+}*/
+
+
+.blink {
+    animation: 2s infinite blink;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 15% {
+        opacity: 0;
+    }
+    16%, 100% {
+        opacity: 1;
+    }
+}
+
+.flier {
+  pointer-events: none;
+}
+
+.flier > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+  top: 0;
+  left: 0;
+  transform: translateX(-120%) translateY(-120%) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: 999999;
+}
+
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+  98.001%, 0% {
+                display: block;
+    transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+  }
+
+  15% {
+    transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+  }
+
+  15.001%, 18% {
+    transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+  }
+
+  40% {
+    transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+  }
+
+  40.001%, 43% {
+    transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+  }
+
+  65% {
+    transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+  }
+
+  65.001%, 68% {
+    transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+  }
+
+  95% {
+    transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+  }
+}
