@@ -1,6 +1,5 @@
 
 .page-wrap {
-    padding-top: 5vw;
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -56,8 +55,8 @@ a {
 
 #links{
     margin: 0 auto;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     background-image: url("images/clouds.png");
     background-size: contain;
     background-repeat: no-repeat;    
@@ -67,7 +66,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 7px;
     touch-action: none;
     z-index: 30;
 }
@@ -95,7 +93,7 @@ a {
 #myPopup{
   display: none;
   z-index: 5000;
-  width: 750px;
+  width: 800px;
   height: 300px;
   border: 2px solid #FF4500;
   background-color: white;
@@ -122,27 +120,6 @@ a {
   to {opacity:1 ;}
 }
 
-@keyframes wavy{
-  0%{
-    transform: translateX(0) translateY(0) scaleY(1);
-  }
-  50%{
-    transform: translateX(-25) translateY(0) scaleY(0.5);
-  }
-  100%{
-    transform: translateX(-50) translateY(0) scaleY(1);
-  }
-}
-
-#smell {
-    z-index: 30;
-    width: 100vh;
-    position: relative;
-    left: 30px;
-    top: 100px;
-}
-
-
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -155,7 +132,7 @@ a {
   }
 
 #links{
-  transform:scale(0.7);
+  transform:scale(0.8);
   width: auto;
   }
 
@@ -165,10 +142,9 @@ a {
 
 #myPopup {
     width: 95%;
-    height: 75%;
+    height: 60%;
     margin-top: 30px;
     padding: 4vh;
-    padding-top: 8vh;
 
   }
 }
