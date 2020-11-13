@@ -1,6 +1,6 @@
 
 .page-wrap {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
@@ -12,10 +12,10 @@
 }
 
 body {
-    background-image: url("images/gradients.jpg");
+    background-image: url("images/plants desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;  
+    background-position: top;  
 
     padding: 30px;
     box-sizing: border-box;
@@ -29,6 +29,7 @@ a {
   color: #FF4500;
   text-decoration: none;
 }
+
 
 #expand-box {
     z-index: 50;
@@ -45,8 +46,8 @@ a {
 
 #links{
     margin: 0 auto;
-    width: 700px;
-    height: 700px;
+    width: 85%;
+    height: 550px;
     background-image: url("images/clouds.png");
     background-size: contain;
     background-repeat: no-repeat;    
@@ -77,7 +78,7 @@ a {
   display: none;
   z-index: 5000;
   width: 800px;
-  height: 350px;
+  height: 300px;
   border: 2px solid #FF4500;
   background-color: white;
   margin: 0% auto;
@@ -90,6 +91,15 @@ a {
   border-radius: 25px;
   box-shadow: 5px 7px 10px #fffd57;
   overflow-wrap: normal;
+}
+
+#bkgdtext{
+  width: 50%;
+  float: right;
+  z-index: 1;
+  margin-right: 10%;
+  color: white;
+  font-size: 24;
 }
 
 /* Add animation (fade in the popup) */
@@ -107,6 +117,11 @@ a {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
+body {
+    background-image: url("images/plants 2.jpg");
+}
+
+
 .page-wrap {
     padding-top: 0;
     position: absolute;
@@ -117,6 +132,8 @@ a {
 #links{
   transform:scale(0.7);
   width: auto;
+  background-image: none;
+
   }
 
 #expand-box {
@@ -125,10 +142,18 @@ a {
 
 #myPopup {
     width: 90%;
-    height: 70%;
+    height: 80%;
     margin-top: 20px;
     padding: 2.5vh;
+  }
 
+#bkgdtext{
+  width: 60%;  
+  float: right;
+  z-index: -100;
+  margin-right: 0%;
+  color: #ff00fc;
+  font-size: 18px;
   }
 }
 
