@@ -1,5 +1,6 @@
 
 .page-wrap {
+    height: 100%;
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -11,13 +12,18 @@
     z-index: 30;
 }
 
+
+/*header {
+  z-index: 100;
+}
+*/
+
 body {
-    background-image: url("images/plants desktop.jpg");
+    background-image: url("images/eatme_bkgd.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;  
 
-    padding: 30px;
     box-sizing: border-box;
     font: 18px Archivo, serif;
     color: white;
@@ -30,25 +36,11 @@ a {
   text-decoration: none;
 }
 
-
-#expand-box {
-    z-index: 50;
-    width: 95%;
-  }
-
-#expand-box-header {
-    margin: 0 auto;
-    padding: 0 0 3px 2px;
-    overflow: hidden;
-  }
-
-#expand_box_sub_header { clear: both; }
-
 #links{
+    background-image: url("images/jade.png");
     margin: 0 auto;
-    width: 85%;
-    height: 550px;
-    background-image: url("images/clouds.png");
+    width: 100%;
+    height: 100%;
     background-size: contain;
     background-repeat: no-repeat;    
     background-position: center;
@@ -79,7 +71,7 @@ a {
   z-index: 5000;
   width: 800px;
   height: auto;
-  border: 2px solid #FF4500;
+  border: 2px solid red;
   background-color: white;
   margin: 0% auto;
   padding: 6vh;
@@ -94,12 +86,13 @@ a {
 }
 
 #bkgdtext{
+  position: absolute;
   width: 50%;
-  float: right;
-  z-index: 1;
-  margin-right: 10%;
+  height: 100%;
+  z-index: -100;
+  margin-left: 0;
   color: white;
-  font-size: 24;
+  font-size: 26;
 }
 
 /* Add animation (fade in the popup) */
@@ -125,7 +118,7 @@ body {
 .page-wrap {
     padding-top: 0;
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
   }
 
@@ -136,22 +129,15 @@ body {
   background-image: none;
   }
 
-#expand-box {
-    z-index: 1000;
-  }
-
 #myPopup {
-    width: 90%;
+    width: 85%;
     height: auto;
     margin-top: 20px;
     padding: 2.5vh;
   }
 
 #bkgdtext{
-  width: 60%;  
-  float: right;
-  z-index: -100;
-  margin-right: 0%;
+  width: 60%;
   color: #ff00fc;
   font-size: 18px;
   }
