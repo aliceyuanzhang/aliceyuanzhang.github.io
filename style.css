@@ -45,9 +45,9 @@ a {
 }
 
 blockquote {
-  margin: 20px;
-  padding: 24px;
-   border-left: 1px solid #fff;
+  margin-left: 20px;
+  padding-left: 24px;
+  border-left: 1px solid #fff;
 }
 
 
@@ -137,8 +137,8 @@ body {
     transform: translateY(-50%);
   }
 
-  .essay-wrap {
-    max-width: 80%;
+.essay-wrap {
+    max-width: 86%;
 }
 
 #links{
