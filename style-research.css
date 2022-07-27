@@ -1,0 +1,328 @@
+
+.page-wrap {
+    max-width: 60%;
+    margin: 20 auto;
+    text-align: left;
+}
+
+#flex-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ #flex-menu > .flex-item {
+  flex: auto;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+#spotlight-text {
+  display: none;  
+  position: absolute;
+  overflow: auto;
+
+  border-style: inset;
+  border-width: 4;
+  border-color: hotpink;
+  box-shadow: 5px 7px 10px blue;
+
+  width: 50%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 65%;
+  
+  padding: 4vw;
+  
+  background-color: rgba(255, 0, 0, 0.8);
+  background-image: url('images/roots.jpg');
+  background-width: cover;
+  background-position: :center;
+  background-size: 300%;
+  background-blend-mode: screen;
+
+  color: black;
+  z-index: 5000;
+
+}
+
+.main-section {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 1vw;
+
+  height: auto;
+}
+
+.sidebar {
+  width: 15%;
+  padding: 1vw;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.middle-section {
+  width: 60%;
+  overflow: auto;
+
+  border-style: inset;
+  border-width: 4;
+  border-color: white;
+  box-shadow: 5px 7px 10px blue;
+}
+
+#section-text {
+  padding: 3vw;
+}
+
+#section-text > * {
+  display: none;
+}
+
+#section-text > #incense {
+  display: block;
+}
+
+
+header {
+  font: 30px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+
+body {
+    background-image: url('images/tech-grief.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    font: 16px Syne Mono, sans serif;
+    color: white;
+    z-index: 15;
+}
+
+a {
+  font-weight: bold;
+  color: #d9f58e;
+  text-decoration: none;
+}
+
+blockquote {
+  margin-left: 20px;
+  padding-left: 24px;
+  margin-right: 12px;
+  border-left: 1px solid #fff;
+}
+
+
+
+
+#links{
+    background-image: url("images/jade.png");
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;    
+    background-position: center;
+/*    animation: 5s infinite wavy;*/    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+    z-index: 30;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  touch-action: none;
+  user-select: none;
+}
+
+.item:hover {
+  cursor: help;
+  transform: scale(1.5);
+}
+
+
+#myPopup{
+  display: none;
+  z-index: 5000;
+  width: 800px;
+  border: 2px solid red;
+  border-radius: 25px;
+  background-image: url('images/mycelium.png'), linear-gradient(rgba(10, 3, 37, 0.6), rgba(10, 3, 37, 0.6)),url('images/roots.jpg');
+  margin: 0% auto;
+  padding: 6vh;
+  padding-top: 3vh;
+  box-sizing: border-box;
+  position: absolute;
+  font: 12px Syne Mono, monospace;
+  color: white;
+  box-shadow: 5px 7px 10px #fffd57;
+  overflow: auto;
+  height: auto;
+  max-height: 80%;
+}
+
+#bkgdtext{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -100;
+  margin-left: 0;
+  color: white;
+  font-size: 22;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+
+#flex-menu {
+  display: none;
+}
+
+#mobile-menu {
+  display: initial;
+}
+
+.page-wrap {
+    max-width: 80%;
+  }
+
+#links{
+  transform:scale(0.7);
+  width: auto;
+  margin-right: 30px;
+  background-image: none;
+  }
+
+#myPopup {
+    width: 85%;
+    height: auto;
+    margin-top: 20px;
+    padding: 2.5vh;
+  }
+
+#bkgdtext{
+  width: 60%;
+  color: #ff00fc;
+  font-size: 18px;
+  }
+}
+
+
+/*h1 {
+    color: yellow;
+    font: 36px Fahkwang, serif;
+    font-weight: bold;
+}
+
+h2 {
+    color: lightblue;
+    font: 20px Fahkwang, serif;
+    font-weight: regular;
+}
+
+p {
+	color: white;
+	font: 28px FreeMono, monospace;
+}*/
+
+
+.blink {
+    animation: 2s infinite blink;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 15% {
+        opacity: 0;
+    }
+    16%, 100% {
+        opacity: 1;
+    }
+}
+
+.flier {
+  pointer-events: none;
+}
+
+.flier > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+  top: 0;
+  left: 0;
+  transform: translateX(-120%) translateY(-120%) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: 999999;
+}
+
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+  98.001%, 0% {
+                display: block;
+    transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+  }
+
+  15% {
+    transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+  }
+
+  15.001%, 18% {
+    transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+  }
+
+  40% {
+    transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+  }
+
+  40.001%, 43% {
+    transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+  }
+
+  65% {
+    transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+  }
+
+  65.001%, 68% {
+    transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+  }
+
+  95% {
+    transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+  }
+}
