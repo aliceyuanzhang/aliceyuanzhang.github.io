@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Syne Mono";
+  src: url('fonts/Syne_mono/SyneMono-Regular.ttf');
+}
+
 .page-wrap {
     max-width: 60%;
     margin: 20 auto;
@@ -18,7 +23,11 @@
   display: none;
 }
 
-.topbar {
+#topbar {
+  display: none;
+}
+
+#menu_close {
   display: none;
 }
 
@@ -143,7 +152,7 @@ blockquote {
   font-size: 30px;
 }
 
-.topbar {
+#topbar {
   display: flex;
   flex-direction: column;
   width: 86%;
@@ -154,7 +163,7 @@ blockquote {
   overflow: auto;
   }
 
-.topbar > * {
+#topbar > * {
   margin-top: 2px;
   margin-bottom: 2px;
   padding-left: 12px;
@@ -165,6 +174,17 @@ blockquote {
   border-width: 4px;
   border-color: white;
   box-shadow: 5px 7px 10px blue;
+}
+
+#menu_close {
+  width: 80%;
+  margin: 16px 8% 16px 8%;
+  padding: 16px;
+  font-size: 18px;
+  height: auto;
+
+  text-align: left;
+  overflow: auto;
 }
 
 .sidebar {
