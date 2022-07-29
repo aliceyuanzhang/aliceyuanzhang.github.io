@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Syne Mono";
-  src: url('fonts/Syne_mono/SyneMono-Regular.ttf');
+  src: url('fonts/Syne_Mono/SyneMono-Regular.ttf') format('truetype');
 }
 
 .page-wrap {
@@ -93,6 +93,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     box-sizing: border-box;
+    font-family: "Syne Mono";
     font: 16px Syne Mono, sans serif;
     color: white;
     z-index: 15;

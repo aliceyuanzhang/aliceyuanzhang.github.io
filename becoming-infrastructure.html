@@ -5,9 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style-research.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne+Mono">
 
 <title>Becoming Infrastructure</title>
 
@@ -305,24 +304,29 @@ function openContent(content) {
     }
 
     document.getElementById(content).style.display = "block";
-    document.getElementById("topbar").style.display = "none";
-    document.getElementById("menu_close").style.display = "block";
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    if (mediaQuery.matches) {
+        document.getElementById("topbar").style.display = "none";
+        document.getElementById("menu_close").style.display = "block";
+    } 
 }
 
 function closeContent() {
-    document.getElementById("topbar").style.display = "block";
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    if (mediaQuery.matches) {
+        document.getElementById("topbar").style.display = "block";
     
-    var nodes = document.getElementById("section-text").childNodes;
+        var nodes = document.getElementById("section-text").childNodes;
 
-    for(var i=0; i<nodes.length; i++) {
-        if(nodes[i].nodeName.toLowerCase() == 'div') {
-            nodes[i].style.display = "none";
+        for(var i=0; i<nodes.length; i++) {
+            if(nodes[i].nodeName.toLowerCase() == 'div') {
+                nodes[i].style.display = "none";
+            }
         }
+        document.getElementById("incense").style.display = "block";
+        document.getElementById("menu_close").style.display = "none";
     }
-
-    document.getElementById("incense").style.display = "block";
-    document.getElementById("menu_close").style.display = "none";
-
 }
 
 </script>
