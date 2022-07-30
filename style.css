@@ -131,6 +131,17 @@ blockquote {
   font-size: 22;
 }
 
+#flex-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+ #flex-menu > .flex-item {
+  flex: auto;
+}
+
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
